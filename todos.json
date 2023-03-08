@@ -1,0 +1,29 @@
+[
+    {
+        "todaysDate": "07/03/2023",
+        "task": "get Project 1 running on mongo",
+        "dueDate": "10/03/2023",
+        "class": "CSE341",
+        "appointment": "none",
+        "activities": "none",
+        "notes": "check for the syntax errors"
+    },
+    {
+        "todaysDate": "07/03/2023",
+        "task": "get Project 1 running on swagger",
+        "dueDate": "11/03/2023",
+        "class": "CSE341",
+        "appointment": "none",
+        "activities": "none",
+        "notes": "create the documentation"
+    },
+    {
+        "todaysDate": "07/03/2023",
+        "task": "get Project 1 running on github",
+        "dueDate": "12/03/2023",
+        "class": "CSE341",
+        "appointment": "none",
+        "activities": "none",
+        "notes": "validate all the data"
+    }
+]
