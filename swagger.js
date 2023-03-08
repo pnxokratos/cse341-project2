@@ -6,6 +6,7 @@ const doc = {
     description: 'ToDos API',
   },
   host: 'project2-6t22.onrender.com',
+  //host: 'localhost:8080',
   schemes: ['https'],
 };
 
