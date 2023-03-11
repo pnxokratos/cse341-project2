@@ -88,23 +88,15 @@ const updateToDo = async (req, res, next) => {
 };
 
 const deleteToDo = async (req, res) => {
-  try {
-    const userId = new ObjectId(req.params.id);
-    const response = await mongodb
-      .getDb()
-      .db("project2")
-      .collection("todos")
-      .deleteOne({_id: userId}, true);
-    console.log(response);
-    if (response.deletedCount > 0) {
-      res.status(200).send();
-    }
-    else {
-      res.status(500).json(response.error || 'An error occurred while deleting the recipe');
-    }
-  } catch {
-    res.status(500).json({err});
+  const userId = new ObjectId(req.params.id);
+  
+  const response = await mongodb.getDb().db("project2").collection('todos').deleteOne({ _id: userId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'An error occurred while deleting this record.');
   }
-}
+}; 
 
 module.exports = { getAll, getSingle, createToDo, updateToDo, deleteToDo };
