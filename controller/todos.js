@@ -93,7 +93,7 @@ const deleteToDo = async (req, res) => {
   const response = await mongodb.getDb().db("project2").collection('todos').deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
-    res.status(204).send();
+    res.status(204).send({ message: 'Record has been deleted' });
   } else {
     res.status(500).json(response.error || 'An error occurred while deleting this record.');
   }
