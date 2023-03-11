@@ -72,7 +72,7 @@ const updateToDo = async (req, res, next) => {
   try {
     const response = await mongodb
       .getDb()
-      .db("CSE341")
+      .db("project2")
       .collection("todos")
       .replaceOne({ _id: userId }, todo);
     console.log(response);
@@ -95,7 +95,7 @@ const deleteToDo = async (req, res, next) => {
   try {
     const response = await mongodb
       .getDb()
-      .db("CSE341")
+      .db("project2")
       .collection("todos")
       .remove({ _id: userId }, true);
     console.log(response);
