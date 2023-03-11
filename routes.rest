@@ -1,0 +1,55 @@
+//LOCALHOST DEPLOY
+//-----------------
+### GET ALL CONTACTS
+GET http://localhost:8080/todos
+### GET CONTACT BY ID
+GET http://localhost:8080/todos/6408f034515974a6c6a5fafa
+### CREATE A NEW CONTACT 
+POST http://localhost:8080/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "todaysDate": "07/04/2023",
+    "task": "this is a test",
+    "dueDate": "10/03/2023",
+    "class": "CSE341",
+    "appointment": "none",
+    "activities": "none",
+    "notes": "check for the syntax errors"
+}
+//------------------
+//RENDER
+//------------------
+### GETS ALL CONTACTS FROM RENDER
+GET https://project2-6t22.onrender.com/todos HTTP/1.1
+### GETS CONTACT BY ID
+GET https://project2-6t22.onrender.com/todos/6408f034515974a6c6a5fafa HTTP/1.1
+### POST NEW CONTACT
+POST https://project2-6t22.onrender.com/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "todaysDate": "07/03/2023",
+    "task": "get Project 1 running on mongo",
+    "dueDate": "10/03/2023",
+    "class": "CSE341",
+    "appointment": "none",
+    "activities": "none",
+    "notes": "check for the syntax errors"
+}
+
+### UPDATE AN EXISTING CONTACT
+PUT https://project2-6t22.onrender.com/contacts/63ffaf472761efb93e10287c HTTP/1.1
+Content-Type: application/json
+
+{
+    "todaysDate": "07/03/2023",
+    "task": "get Project 1 running on mongo",
+    "dueDate": "10/03/2023",
+    "class": "CSE341",
+    "appointment": "none",
+    "activities": "none",
+    "notes": "check for the syntax errors"
+}
+
+
