@@ -87,16 +87,26 @@ const updateToDo = async (req, res, next) => {
   }
 };
 
-const deleteToDo = async (req, res) => {
+const deleteToDo = async (req,res,next) => {
+  if (ObjectId.isValid(req.id)) 
+  {return res.status(400).send("Invalid object id");}
   const userId = new ObjectId(req.params.id);
-  
-  const response = await mongodb.getDb().db("project2").collection('todos').deleteOne({ _id: userId }, true);
-  console.log(response);
-  if (response.deletedCount > 0) {
-    res.status(204).send({ message: 'Record has been deleted' });
-  } else {
-    res.status(500).json(response.error || 'An error occurred while deleting this record.');
-  }
-}; 
+  try{
+    const response = await mongodb
+    .getDb()
+    .db('project2')
+    .collection('todos')
+    .remove({ _id: userId }, true);
+    console.log(response);
+    if (response.deletedCount > 0) {
+      res.status(204).send(); 
+    }
+  }catch (error){
+    return res.status(500).json({
+      success: false,
+      message: (response.error || 'Some error occurred while deleting the contact.')
+      })
+    }
+};
 
 module.exports = { getAll, getSingle, createToDo, updateToDo, deleteToDo };
