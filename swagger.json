@@ -30,6 +30,9 @@
       },
       "/todos/": {
         "get": {
+          "tags": [
+            "Todo List"
+          ],
           "description": "",
           "produces": [
             "application/json"
@@ -90,6 +93,9 @@
       },
       "/todos/{id}": {
         "get": {
+          "tags": [
+            "Reminder tasks"
+          ],
           "description": "",
           "produces": [
             "application/json"
