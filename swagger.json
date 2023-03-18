@@ -7,6 +7,16 @@
     },
     "host": "project2-6t22.onrender.com",
     "basePath": "/",
+    "tags": [
+      {
+        "name": "Todo List",
+        "description": "API endpoints for Products collection."
+      },
+      {
+        "name": "Reminder tasks",
+        "description": "API endpoints for Inventory collection"
+      }
+    ],
     "schemes": [
       "https"
     ],
@@ -135,6 +145,137 @@
                     "example": "any"
                   },
                   "notes": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "Data imported"
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "412": {
+              "description": "Precondition Failed"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/tasks/": {
+        "get": {
+          "description": "Reminder tasks",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "todaysDate": {
+                    "example": "any"
+                  },
+                  "reminder": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Created"
+            },
+            "412": {
+              "description": "Precondition Failed"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/tasks/{id}": {
+        "get": {
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "put": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "todaysDate": {
+                    "example": "any"
+                  },
+                  "reminder": {
                     "example": "any"
                   }
                 }
