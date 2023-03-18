@@ -45,6 +45,9 @@
           }
         },
         "post": {
+          "tags": [
+            "Todo List"
+          ],
           "description": "",
           "parameters": [
             {
@@ -94,7 +97,7 @@
       "/todos/{id}": {
         "get": {
           "tags": [
-            "Reminder tasks"
+            "Todo List"
           ],
           "description": "",
           "produces": [
@@ -118,6 +121,9 @@
           }
         },
         "put": {
+          "tags": [
+            "Todo List"
+          ],
           "description": "",
           "parameters": [
             {
@@ -173,6 +179,9 @@
           }
         },
         "delete": {
+          "tags": [
+            "Todo List"
+          ],
           "description": "",
           "parameters": [
             {
@@ -197,6 +206,9 @@
       },
       "/tasks/": {
         "get": {
+          "tags": [
+            "Reminder tasks"
+          ],
           "description": "Reminder tasks",
           "produces": [
             "application/json"
@@ -242,6 +254,9 @@
       },
       "/tasks/{id}": {
         "get": {
+          "tags": [
+            "Reminder tasks"
+          ],
           "description": "",
           "produces": [
             "application/json"
@@ -264,6 +279,9 @@
           }
         },
         "put": {
+          "tags": [
+            "Reminder tasks"
+          ],
           "description": "",
           "parameters": [
             {
@@ -304,6 +322,9 @@
           }
         },
         "delete": {
+          "tags": [
+            "Reminder tasks"
+          ],
           "description": "",
           "parameters": [
             {
