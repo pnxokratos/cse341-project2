@@ -8,6 +8,16 @@ const doc = {
   host: 'project2-6t22.onrender.com',
   //host: 'localhost:8080',
   schemes: ['https'],
+  tags: [
+    {
+      "name": "Todo List",
+      "description": "API endpoints for Todo's collection."
+    },
+    {
+      "name": "Reminder tasks",
+      "description": "API endpoints for Reminder task collection"
+    }
+  ],
 };
 
 const outputFile = './swagger.json';
