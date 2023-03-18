@@ -96,7 +96,7 @@ const deleteToDo = async (req,res,next) => {
     .getDb()
     .db('project2')
     .collection('todos')
-    .remove({ _id: userId }, true);
+    .deleteOne({ _id: userId }, true);
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send(); 
