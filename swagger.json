@@ -221,6 +221,9 @@
           }
         },
         "post": {
+          "tags": [
+            "Reminder tasks"
+          ],
           "description": "",
           "parameters": [
             {
